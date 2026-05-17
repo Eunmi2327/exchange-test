@@ -746,11 +746,31 @@ function showResult() {
   const email = document.getElementById('emailInput').value;
   const phone = document.getElementById('phoneInput').value;
   if (email || phone) {
-    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdWggaPkt1wngNDz9apvNUYKq0Ua4gvB4TqW8CbJ3g7PDnQBw/formResponse';
-    const formData = new FormData();
-    formData.append('entry.466407024', email);
-    formData.append('entry.2014604253', phone);
-    fetch(formUrl, { method: 'POST', mode: 'no-cors', body: formData });
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://docs.google.com/forms/d/e/1FAIpQLSdWggaPkt1wngNDz9apvNUYKq0Ua4gvB4TqW8CbJ3g7PDnQBw/formResponse';
+    form.target = 'hidden_iframe';
+    form.style.display = 'none';
+
+    const f1 = document.createElement('input');
+    f1.type = 'hidden';
+    f1.name = 'entry.466407024';
+    f1.value = email;
+    form.appendChild(f1);
+
+    const f2 = document.createElement('input');
+    f2.type = 'hidden';
+    f2.name = 'entry.2014604253';
+    f2.value = phone;
+    form.appendChild(f2);
+
+    document.body.appendChild(form);
+    form.submit();
   }
   document.getElementById('emailStep').classList.remove('active');
   document.getElementById('resultWrap').classList.add('active');
