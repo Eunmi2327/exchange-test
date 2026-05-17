@@ -357,7 +357,9 @@
     <button class="btn-next" id="next1" onclick="nextQ(1)">다음 →</button>
   </div>
 
-  <!-- Q2: 영어 성적 (영어권용) -->
+  <!-- ── 영어권 질문들 ── -->
+
+  <!-- Q2: 영어 성적 -->
   <div class="question-card" id="q2">
     <div class="q-number">Question 02</div>
     <div class="q-text">현재 보유한 영어 성적은?</div>
@@ -391,6 +393,92 @@
     <button class="btn-next" id="next2" onclick="nextQ(2)">다음 →</button>
   </div>
 
+  <!-- Q2E-A: 영어권 대륙 선호 -->
+  <div class="question-card" id="q2ea">
+    <div class="q-number">Question 03</div>
+    <div class="q-text">어느 대륙으로 가고 싶나요?</div>
+    <div class="q-sub">선호하는 지역을 골라주세요.</div>
+    <div class="options">
+      <div class="option" onclick="select(this,'continent','europe')">
+        <span class="emoji">🏰</span>
+        <div class="opt-label">유럽
+          <div class="opt-desc">서유럽·북유럽·동유럽·발트해 국가</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'continent','americas')">
+        <span class="emoji">🗽</span>
+        <div class="opt-label">미주 (미국·멕시코)
+          <div class="opt-desc">북미 대학 캠퍼스 생활</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'continent','asia_oc')">
+        <span class="emoji">🌏</span>
+        <div class="opt-label">아시아·오세아니아
+          <div class="opt-desc">말레이시아·인도네시아·호주·홍콩 등</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2ea" onclick="nextQ('2ea')">다음 →</button>
+  </div>
+
+  <!-- Q2E-B: 영어권 학교 규모 -->
+  <div class="question-card" id="q2eb">
+    <div class="q-number">Question 04</div>
+    <div class="q-text">선호하는 학교 규모는?</div>
+    <div class="q-sub"></div>
+    <div class="options">
+      <div class="option" onclick="select(this,'schoolSize','large')">
+        <span class="emoji">🏛️</span>
+        <div class="opt-label">대형 종합대학교
+          <div class="opt-desc">다양한 전공·시설·활동이 풍부한 곳</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'schoolSize','small')">
+        <span class="emoji">🏫</span>
+        <div class="opt-label">소규모 응용과학대·전문대
+          <div class="opt-desc">실무 중심, 교수와 가까운 소통 환경</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2eb" onclick="nextQ('2eb')">다음 →</button>
+  </div>
+
+  <!-- Q2E-C: 영어 외 현지어 -->
+  <div class="question-card" id="q2ec">
+    <div class="q-number">Question 05</div>
+    <div class="q-text">영어 외 현지어도 배우고 싶나요?</div>
+    <div class="q-sub">수업은 영어지만 생활에서 접하는 언어예요.</div>
+    <div class="options">
+      <div class="option" onclick="select(this,'localLang','spanish')">
+        <span class="emoji">💃</span>
+        <div class="opt-label">스페인어권이 좋아요
+          <div class="opt-desc">멕시코·스페인</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'localLang','french')">
+        <span class="emoji">🥐</span>
+        <div class="opt-label">프랑스어권이 좋아요
+          <div class="opt-desc">프랑스·모로코·벨기에</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'localLang','german')">
+        <span class="emoji">🍺</span>
+        <div class="opt-label">독일어권이 좋아요
+          <div class="opt-desc">독일·오스트리아</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'localLang','none')">
+        <span class="emoji">🌐</span>
+        <div class="opt-label">영어만으로도 충분해요
+          <div class="opt-desc">현지어 상관없이 영어 환경 선호</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2ec" onclick="nextQ('2ec')">다음 →</button>
+  </div>
+
+  <!-- ── 일본어권 질문들 ── -->
+
   <!-- Q2J: 일본어 성적 -->
   <div class="question-card" id="q2j">
     <div class="q-number">Question 02</div>
@@ -419,12 +507,98 @@
     <button class="btn-next" id="next2j" onclick="nextQ('2j')">다음 →</button>
   </div>
 
+  <!-- Q2J-A: 일본 지역 선호 -->
+  <div class="question-card" id="q2ja">
+    <div class="q-number">Question 03</div>
+    <div class="q-text">선호하는 일본 지역은?</div>
+    <div class="q-sub"></div>
+    <div class="options">
+      <div class="option" onclick="select(this,'japanRegion','kanto_kansai')">
+        <span class="emoji">🏯</span>
+        <div class="opt-label">도쿄·오사카 등 대도시권
+          <div class="opt-desc">간토·간사이 지역, 번화한 도심 생활</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'japanRegion','kyushu_shikoku')">
+        <span class="emoji">🌊</span>
+        <div class="opt-label">규슈·시코쿠 지역
+          <div class="opt-desc">따뜻한 기후, 자연과 도시의 조화</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'japanRegion','hokkaido_tohoku')">
+        <span class="emoji">⛄</span>
+        <div class="opt-label">홋카이도·도호쿠 지역
+          <div class="opt-desc">자연환경 풍부, 서늘한 기후</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2ja" onclick="nextQ('2ja')">다음 →</button>
+  </div>
+
+  <!-- Q2J-B: 바다 vs 내륙 -->
+  <div class="question-card" id="q2jb">
+    <div class="q-number">Question 04</div>
+    <div class="q-text">바다 vs 내륙, 어디가 좋아요?</div>
+    <div class="q-sub"></div>
+    <div class="options">
+      <div class="option" onclick="select(this,'japanNature','sea')">
+        <span class="emoji">🌊</span>
+        <div class="opt-label">바다 근처가 좋아요
+          <div class="opt-desc">해안 도시, 항구, 해산물 문화</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'japanNature','inland')">
+        <span class="emoji">🏔️</span>
+        <div class="opt-label">내륙·산지가 좋아요
+          <div class="opt-desc">조용한 캠퍼스, 자연 속 생활</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'japanNature','any')">
+        <span class="emoji">🗾</span>
+        <div class="opt-label">상관없어요
+          <div class="opt-desc"></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2jb" onclick="nextQ('2jb')">다음 →</button>
+  </div>
+
+  <!-- Q2J-C: 온천·자연 vs 도심 -->
+  <div class="question-card" id="q2jc">
+    <div class="q-number">Question 05</div>
+    <div class="q-text">일본에서 즐기고 싶은 라이프스타일은?</div>
+    <div class="q-sub"></div>
+    <div class="options">
+      <div class="option" onclick="select(this,'japanLife','nature')">
+        <span class="emoji">♨️</span>
+        <div class="opt-label">온천·자연 힐링
+          <div class="opt-desc">온천, 등산, 자연 속 여유로운 생활</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'japanLife','city')">
+        <span class="emoji">🛍️</span>
+        <div class="opt-label">도심·쇼핑·문화생활
+          <div class="opt-desc">번화가, 맛집, 다양한 도시 문화</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2jc" onclick="nextQ('2jc')">다음 →</button>
+  </div>
+
+  <!-- ── 중국어권 질문들 ── -->
+
   <!-- Q2C: 중국어 성적 -->
   <div class="question-card" id="q2c">
     <div class="q-number">Question 02</div>
     <div class="q-text">현재 HSK 성적은?</div>
-    <div class="q-sub">보유한 HSK 급수를 선택해주세요.</div>
+    <div class="q-sub">없어도 갈 수 있는 학교가 있어요!</div>
     <div class="options">
+      <div class="option" onclick="select(this,'hsk','0')">
+        <span class="emoji">🌱</span>
+        <div class="opt-label">HSK 성적 없음
+          <div class="opt-desc">어학성적 없이 지원 가능한 학교로 추천</div>
+        </div>
+      </div>
       <div class="option" onclick="select(this,'hsk','2')">
         <span class="emoji">🐉</span>
         <div class="opt-label">HSK 2급
@@ -453,9 +627,62 @@
     <button class="btn-next" id="next2c" onclick="nextQ('2c')">다음 →</button>
   </div>
 
+
+  <!-- Q2C-B: 도시 규모 -->
+  <div class="question-card" id="q2cb">
+    <div class="q-number">Question 03</div>
+    <div class="q-text">선호하는 도시 규모는?</div>
+    <div class="q-sub"></div>
+    <div class="options">
+      <div class="option" onclick="select(this,'chineseCity','mega')">
+        <span class="emoji">🏙️</span>
+        <div class="opt-label">베이징·상하이 같은 초대도시
+          <div class="opt-desc">인프라 풍부, 글로벌 환경</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'chineseCity','mid')">
+        <span class="emoji">🏘️</span>
+        <div class="opt-label">지방 중도시
+          <div class="opt-desc">물가 저렴, 진짜 중국·대만 문화 체험</div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2cb" onclick="nextQ('2cb')">다음 →</button>
+  </div>
+
+  <!-- Q2C-C: 번체 vs 간체 -->
+  <div class="question-card" id="q2cc">
+    <div class="q-number">Question 04</div>
+    <div class="q-text">중국어 학습 목적이 있다면?</div>
+    <div class="q-sub"></div>
+    <div class="options">
+      <div class="option" onclick="select(this,'chineseScript','simplified')">
+        <span class="emoji">📖</span>
+        <div class="opt-label">간체자 (중국 본토 표준)
+          <div class="opt-desc">비즈니스·취업 목적</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'chineseScript','traditional')">
+        <span class="emoji">📜</span>
+        <div class="opt-label">번체자 (대만·홍콩 표준)
+          <div class="opt-desc">문화·학문적 관심</div>
+        </div>
+      </div>
+      <div class="option" onclick="select(this,'chineseScript','any')">
+        <span class="emoji">🀄</span>
+        <div class="opt-label">상관없어요
+          <div class="opt-desc"></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next" id="next2cc" onclick="nextQ('2cc')">다음 →</button>
+  </div>
+
+  <!-- ── 공통 질문들 ── -->
+
   <!-- Q3: 지역 선호 -->
   <div class="question-card" id="q3">
-    <div class="q-number">Question 03</div>
+    <div class="q-number">Question 06</div>
     <div class="q-text">어떤 지역 분위기를 선호하나요?</div>
     <div class="q-sub">생활 환경 기준으로 골라주세요.</div>
     <div class="options">
@@ -483,7 +710,7 @@
 
   <!-- Q4: 기후 -->
   <div class="question-card" id="q4">
-    <div class="q-number">Question 04</div>
+    <div class="q-number">Question 07</div>
     <div class="q-text">선호하는 기후는?</div>
     <div class="q-sub"></div>
     <div class="options">
@@ -511,7 +738,7 @@
 
   <!-- Q5: 물가/여행 -->
   <div class="question-card" id="q5">
-    <div class="q-number">Question 05</div>
+    <div class="q-number">Question 08</div>
     <div class="q-text">가장 중요한 생활 조건은?</div>
     <div class="q-sub">하나만 골라주세요.</div>
     <div class="options">
@@ -703,8 +930,15 @@ function showQ(id) {
   updateProgress();
 }
 
+function getTotalQ() {
+  if (answers.lang === 'english') return 8;
+  if (answers.lang === 'japanese') return 8;
+  if (answers.lang === 'chinese') return 7;
+  return 8;
+}
+
 function updateProgress() {
-  const total = 5;
+  const total = 8;
   const current = qOrder.length + 1;
   const pct = Math.round(((current - 1) / total) * 100);
   document.getElementById('progressLabel').textContent = `질문 ${Math.min(current, total)} / ${total}`;
@@ -721,25 +955,56 @@ function select(el, key, val) {
   if (btn) btn.classList.add('show');
 }
 
+function goEmail() {
+  document.querySelectorAll('.question-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('progressLabel').textContent = '완료!';
+  document.getElementById('progressPct').textContent = '100%';
+  document.getElementById('emailStep').classList.add('active');
+}
+
 function nextQ(from) {
   qOrder.push(from);
+  // ── 영어권 흐름 ──
   if (from === 1) {
     if (answers.lang === 'english') showQ('q2');
     else if (answers.lang === 'japanese') showQ('q2j');
     else showQ('q2c');
-  } else if (from === 2 || from === '2j' || from === '2c') {
-    showQ('q3');
-  } else if (from === 3) {
-    showQ('q4');
-  } else if (from === 4) {
-    showQ('q5');
-  } else if (from === 5) {
-    document.querySelectorAll('.question-card').forEach(c => c.classList.remove('active'));
-    document.getElementById('progressFill').style.width = '100%';
-    document.getElementById('progressLabel').textContent = '완료!';
-    document.getElementById('progressPct').textContent = '100%';
-    document.getElementById('emailStep').classList.add('active');
   }
+  // 영어 성적 → 대륙
+  else if (from === 2) { showQ('q2ea'); }
+  // 대륙 → 학교규모
+  else if (from === '2ea') { showQ('q2eb'); }
+  // 학교규모 → 현지어
+  else if (from === '2eb') { showQ('q2ec'); }
+  // 현지어 → 공통 지역
+  else if (from === '2ec') { showQ('q3'); }
+
+  // ── 일본어권 흐름 ──
+  // JLPT → 지역선호
+  else if (from === '2j') { showQ('q2ja'); }
+  // 지역선호 → 바다vs내륙
+  else if (from === '2ja') { showQ('q2jb'); }
+  // 바다vs내륙 → 라이프스타일
+  else if (from === '2jb') { showQ('q2jc'); }
+  // 라이프스타일 → 공통 지역
+  else if (from === '2jc') { showQ('q3'); }
+
+  // ── 중국어권 흐름 ──
+  // HSK → 도시규모 (본토vs대만 질문 제거)
+  else if (from === '2c') { showQ('q2cb'); }
+  // 도시규모 → 번체vs간체
+  else if (from === '2cb') { showQ('q2cc'); }
+  // 번체vs간체 → 공통 지역
+  else if (from === '2cc') { showQ('q3'); }
+
+  // ── 공통 흐름 ──
+  else if (from === 3) {
+    if (answers.lang === 'japanese') showQ('q5');
+    else showQ('q4');
+  }
+  else if (from === 4) { showQ('q5'); }
+  else if (from === 5) { goEmail(); }
 }
 
 function showResult() {
@@ -793,10 +1058,77 @@ function showResult() {
     pool = pool.filter(s => jlptOrder[s.jlpt] <= jlptOrder[userJlpt]);
   }
 
-  // 중국어 성적 필터
+  // 중국어 성적 필터 (0=성적없음도 포함)
   if (answers.lang === 'chinese') {
-    const userHsk = parseInt(answers.hsk || '2');
+    const userHsk = parseInt(answers.hsk || '0');
     pool = pool.filter(s => s.hsk <= userHsk);
+  }
+
+  // 영어권 세부 필터
+  if (answers.lang === 'english') {
+    // 대륙 필터
+    if (answers.continent && answers.continent !== 'any') {
+      const continentMap = {
+        europe: ['🇬🇷','🇳🇱','🇳🇴','🇩🇪','🇱🇻','🇱🇹','🇧🇪','🇸🇪','🇪🇸','🇮🇪','🇬🇧','🇦🇹','🇨🇿','🇫🇷','🇫🇮','🇨🇦'],
+        americas: ['🇺🇸','🇲🇽'],
+        asia_oc: ['🇲🇾','🇮🇩','🇻🇳','🇹🇷','🇦🇺','🇭🇰','🇲🇦'],
+      };
+      const flags = continentMap[answers.continent] || [];
+      if (flags.length > 0) {
+        pool = pool.filter(s => flags.some(f => s.country.includes(f)));
+      }
+    }
+    // 학교규모 필터
+    if (answers.schoolSize) {
+      pool = pool.filter(s => !s.schoolSize || s.schoolSize === answers.schoolSize || s.schoolSize === 'any');
+    }
+    // 현지어 필터
+    if (answers.localLang && answers.localLang !== 'none') {
+      const langMap = { spanish: ['🇪🇸','🇲🇽'], french: ['🇫🇷','🇲🇦','🇧🇪'], german: ['🇩🇪','🇦🇹'] };
+      const flags = langMap[answers.localLang] || [];
+      if (flags.length > 0) {
+        const preferred = pool.filter(s => flags.some(f => s.country.includes(f)));
+        if (preferred.length >= 3) pool = preferred;
+      }
+    }
+  }
+
+  // 일본어권 세부 필터
+  if (answers.lang === 'japanese') {
+    if (answers.japanRegion) {
+      const regionMap = {
+        kanto_kansai: ['메이지','치바','도호쿠','센다이','우츠노미야','동경해양'],
+        kyushu_shikoku: ['규슈','후쿠오카','사가','가고시마','세이난','슈지츠','메이오','오키나와'],
+        hokkaido_tohoku: ['홋카이도','삿포로','도호쿠'],
+      };
+      const names = regionMap[answers.japanRegion] || [];
+      if (names.length > 0) {
+        const preferred = pool.filter(s => names.some(n => s.name.includes(n)));
+        if (preferred.length >= 3) pool = preferred;
+      }
+    }
+  }
+
+  // 중국어권 세부 필터
+  if (answers.lang === 'chinese') {
+    // 본토 vs 대만
+    if (answers.chineseArea && answers.chineseArea !== 'any') {
+      const areaMap = { mainland: ['🇨🇳'], taiwan: ['🇹🇼'] };
+      const flags = areaMap[answers.chineseArea] || [];
+      if (flags.length > 0) {
+        const preferred = pool.filter(s => flags.some(f => s.country.includes(f)));
+        if (preferred.length >= 3) pool = preferred;
+      }
+    }
+    // 간체 vs 번체
+    if (answers.chineseScript && answers.chineseScript !== 'any') {
+      const scriptMap = { simplified: ['🇨🇳'], traditional: ['🇹🇼'] };
+      const flags = scriptMap[answers.chineseScript] || [];
+      if (flags.length > 0) {
+        const preferred = pool.filter(s => flags.some(f => s.country.includes(f)));
+        if (preferred.length >= 3) pool = preferred;
+      }
+    }
   }
 
   // 지역/기후/우선순위 점수화
@@ -854,6 +1186,8 @@ function retryTest() {
   document.getElementById('intro').style.display = 'block';
   document.getElementById('progressWrap').style.display = 'none';
   document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('progressLabel').textContent = '질문 1 / 8';
+  document.getElementById('progressPct').textContent = '0%';
 }
 </script>
 </body>
