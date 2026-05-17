@@ -743,6 +743,15 @@ function nextQ(from) {
 }
 
 function showResult() {
+  const email = document.getElementById('emailInput').value;
+  const phone = document.getElementById('phoneInput').value;
+  if (email || phone) {
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdWggaPkt1wngNDz9apvNUYKq0Ua4gvB4TqW8CbJ3g7PDnQBw/formResponse';
+    const formData = new FormData();
+    formData.append('entry.466407024', email);
+    formData.append('entry.2014604253', phone);
+    fetch(formUrl, { method: 'POST', mode: 'no-cors', body: formData });
+  }
   document.getElementById('emailStep').classList.remove('active');
   document.getElementById('resultWrap').classList.add('active');
 
