@@ -628,31 +628,9 @@
   </div>
 
 
-  <!-- Q2C-B: 도시 규모 -->
-  <div class="question-card" id="q2cb">
-    <div class="q-number">Question 03</div>
-    <div class="q-text">선호하는 도시 규모는?</div>
-    <div class="q-sub"></div>
-    <div class="options">
-      <div class="option" onclick="select(this,'chineseCity','mega')">
-        <span class="emoji">🏙️</span>
-        <div class="opt-label">베이징·상하이 같은 초대도시
-          <div class="opt-desc">인프라 풍부, 글로벌 환경</div>
-        </div>
-      </div>
-      <div class="option" onclick="select(this,'chineseCity','mid')">
-        <span class="emoji">🏘️</span>
-        <div class="opt-label">지방 중도시
-          <div class="opt-desc">물가 저렴, 진짜 중국·대만 문화 체험</div>
-        </div>
-      </div>
-    </div>
-    <button class="btn-next" id="next2cb" onclick="nextQ('2cb')">다음 →</button>
-  </div>
-
   <!-- Q2C-C: 번체 vs 간체 -->
   <div class="question-card" id="q2cc">
-    <div class="q-number">Question 04</div>
+    <div class="q-number">Question 03</div>
     <div class="q-text">중국어 학습 목적이 있다면?</div>
     <div class="q-sub"></div>
     <div class="options">
@@ -769,7 +747,7 @@
     <h2>📬 결과 받아보기</h2>
     <p style="font-size:14px; line-height:1.8; margin-bottom:6px;">
       내년도 모집공고를 이메일/문자메시지 수령 희망합니다.<br>
-      <span style="color:var(--accent); font-weight:700;">→ 개인정보 동의 합니다.</span>
+      <span style="color:var(--accent); font-weight:700;">→ 개인정보 제공 동의합니다.</span>
       <span style="color:var(--muted); font-size:12px;">(2027-1학기 안내 후 즉각 폐기)</span>
     </p>
     <p style="font-size:12px; color:var(--accent); font-weight:700; margin-bottom:20px;">
@@ -1002,10 +980,8 @@ function nextQ(from) {
   else if (from === '2jc') { showQ('q3'); }
 
   // ── 중국어권 흐름 ──
-  // HSK → 도시규모 (본토vs대만 질문 제거)
-  else if (from === '2c') { showQ('q2cb'); }
-  // 도시규모 → 번체vs간체
-  else if (from === '2cb') { showQ('q2cc'); }
+  // HSK → 번체vs간체 (도시규모 질문 제거)
+  else if (from === '2c') { showQ('q2cc'); }
   // 번체vs간체 → 공통 지역
   else if (from === '2cc') { showQ('q3'); }
 
